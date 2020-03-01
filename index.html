@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- <div class="box"></div> -->
+    <div id="prompt_page" class="prompt_page">
+        <img class="bgImage" src="./assets/bgImg.jpg" alt="">
+        <div class="btnDiv"> 
+            <p>Choose the Program you want to Run</p>
+        <button class="button" id="autoBtn" onclick="auto()" >Auto</button>
+        <button class="button" id="manualBtn" onclick="manual()">Manual</button>
+    </div>
+    </div>
+    <div id="program">
+    <div id="timer">
+        <span id="timeScr">00</span>
+        <img id="image" src="./assets/No-sign.png" alt="">
+    </div>
     <div class="main">
-        <div class="redLight" id="start"></div>
-        <div class="yellowLight" id="ready"  ></div>
-        <div class="greenLight" id="go"></div>
+        <div  id="stop" class="offLight"></div>
+        <div id="ready" class="offLight" ></div>
+        <div  id="go" class="offLight"></div>
+        <div class="pole"></div>
+       
     </div>
-    <div class="btns">
-        <button class="startBtn" id="startBtn" onclick="stop()">STOP</button>
-        <button class="readyBtn" id="readyBtn" onclick="getReady()">GET READY</button>
-        <button class="goBtn" id="goBtn" onclick="goNow()">GO !</button>
+    <div id="btns" >
+        <button id="startBtn"  class="button red" onclick="stop()">STOP</button> <br>
+        <button  id="readyBtn" class="button yellow" onclick="getReady()">READY</button> <br>
+        <button  id="goBtn" class="button green" onclick="goNow()">GO !</button>
     </div>
+</div>
+    
     
 </body>
 <script src="index.js" ></script>
